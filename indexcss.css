@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;    
+    margin: 0;
+    padding: 0;
+}
+
+#nav-list{
+    list-style-type: none;
+    display: flex;
+}
+.nav-bar-list-item{
+    border: 1px solid black;
+    padding: 20px;
+    text-decoration: none;
+}
+.nav-bar-list-item a{
+    text-decoration: none;
+    color: hsl(#1bc799ac, 50%, 10%)
+}
