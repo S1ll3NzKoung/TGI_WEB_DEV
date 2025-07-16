@@ -5,6 +5,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: black;
 }
 
 /*
@@ -23,7 +24,7 @@ body { /* Select an HTML tag: `body`*/
   align-items: center;
   height: 64px;
   padding: 0 32px;
-  background: #fff;
+  background: black;
 }
 
 #nav-logo {
@@ -35,7 +36,7 @@ body { /* Select an HTML tag: `body`*/
 #vercel-name {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #111;
+  color: white;
 }
 
 #nav-list {
@@ -71,8 +72,64 @@ body { /* Select an HTML tag: `body`*/
   border-radius: 6px;
   transition: background 0.15s;
 }
+.nav-bar-list-item a i{
+  color: #666;
+  margin-left: 15px;
+  display: inline-block;
+  transform: translatey(2px);
 
-.arrow {
+}
+
+.product_list{
+  color: #fff;
+  display: flex;
+  margin-top: 600px;
+  border: 2px solid white;
+  gap: 80px;
+  
+}
+.product_list li{
+  list-style: none;
+  line-height: 70px;
+
+}
+
+.infrastracture_li {
+  display: flex;
+  align-items: flex-start; /* icon aligns with top of text group */
+  gap: 8px; /* space between icon and text */
+  margin-bottom: 12px; /* optional: spacing between items */
+}
+
+.infrastracture_text_group {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+}
+
+.infrastracture_text {
+  font-weight: 600;
+}
+
+.infrastracture_text_detail {
+  font-size: 0.65em;
+  color: #666;
+  margin-top: 2px;
+}
+
+
+ /* .infrastracture_text{
+  margin-left: 15px;
+  ;
+} */
+
+/* .infrastracture_text_detail{
+  display: block;       
+  font-size: 0.85em;    
+  color: #666;          
+  line-height: 0.1; 
+} */
+.arrow { 
   font-size: 0.7em;
   margin-left: 2px;
 }
@@ -89,13 +146,13 @@ body { /* Select an HTML tag: `body`*/
 }
 
 .nav-btn-outline {
-  background: #fff;
-  color: #111;
+  background: black;
+  color: white;
   border: 1.5px solid #e5e5e5;
 }
 
 .nav-btn-black {
-  background: #111;
-  color: #fff;
+  background: white;
+  color: black;
   border: 1.5px solid #111;
 }
