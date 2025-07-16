@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr ;
+}
+
+.grid-item {
+    border: 1px solid red;
+    height: 600px;
+}
+
+@media(min-width: 768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
