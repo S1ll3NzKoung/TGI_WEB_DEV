@@ -1,35 +1,54 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./src/style.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
   <body>
     <div id="app">
-      <h1>Software Development Project</h1>
+      <h1 class="mb-4">Software Development Project</h1>
       <div class="flex gap-6">
-        <div 
-        id = "todo-task-container"
-        data-show-form = "false"
-        class="border space-y-4 p-4 group"
-        > 
-          <h2 class="font-semibold">Not Started</h2>
-          <button id="add-task-button" class="w-56 shadow-md p-2 border cursor-pointer">+ Add Task</button>
-          <form
-          class="border-amber-500 hidden group-data-[show-form='true']:flex flex-col gap-2">
-            <input type="text" placeholder="new task" class="border p-2" />
-            <button class="bg-blue-600 p-2 text-white">Add Task</button>
-          </form>
- 
-          <ul class=""></ul>
-        </div>  
+        <div
+          id="todo-tasks-container"
+          data-show-form="false"
+          class="border space-y-4 p-4 group"
+        >
+          <h2 class="font-semibold">Not started</h2>
 
-        <div>
-          <h2>In progrss</h2>
-          <button>+ Add Task</button>
+          <button id="add-task-button" class="w-56 shadow-md p-2 border cursor-pointer">
+            + Add task
+          </button>
+
+          <form
+            id="new-todo-form"
+            class="border-amber-500 hidden group-data-[show-form='true']:flex flex-col gap-4 shadow-md p-2"
+          >
+            <input
+              name="new-todo"
+              type="text"
+              placeholder="new task"
+              class="border p-2"
+            />
+            <button class="bg-blue-600 p-2 text-white">Add task</button>
+          </form>
+
+          <ul class="list min-h-12">
+            <template id="todo-item-template">
+            <li class="shadow p-2 flex items-center">
+              <span class="todo-item-text">
+                Drink Water
+              </span>
+            </li>
+            </template>
+          </ul>
+        </div>
+
+        <div class="border">
+          <h2>In progress</h2>
+          <button>+ Add task</button>
         </div>
       </div>
     </div>

@@ -1,9 +1,19 @@
-const addTaskButton = document.getElementById('add-task-button');
-const todotaskcontainer = document.getElementById('todo-task-container');
+const addTaskButton = document.getElementById("add-task-button");
+const todoTaskContainer = document.getElementById("todo-tasks-container");
 
-addTaskButton.addEventListener('click', () => {
-  todotaskcontainer.dataset;
-  console.log(todotaskcontainer.dataset.showform);
-  todotaskcontainer.dataset.showform = 'true';
-  console.log(todotaskcontainer.dataset.showform);
+const newTodoForm = document.getElementById("new-todo-form");
+
+addTaskButton.addEventListener("click", () => {
+  todoTaskContainer.dataset.showForm = true;
 });
+
+newTodoForm.onsubmit = (event) => {
+  event.preventDefault();
+  const formData = new FormData(newTodoForm);
+
+  const inputData = Object.fromEntries(formData.entries());
+  console.log(inputData);
+
+  const todoItemTemplate = document.getElementById("todo-item-template");
+  const list = todoItemTemplate.content.cloneNode(true);
+};
